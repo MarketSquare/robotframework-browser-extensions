@@ -34,4 +34,3 @@ Compare images with pixelmatch
     #finally do the magic, without ImgMagick (ツ)
     CompareImagesWithPixelmatch    ${baseline}    ${actual}    ${diff}    ${Threshold}
 
-*** Test Cases ***
