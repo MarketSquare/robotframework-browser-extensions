@@ -1,5 +1,5 @@
 *** Settings ***
-Library           Browser    jse
+LIBRARY           Browser   jsextension=${CURDIR}${/}pixelmatch.js
 Library           String
 Library           OperatingSystem
 
