@@ -11,3 +11,9 @@ This is an extension for Robot Framework ® Browser, leveraging [Axe Core for Pl
 
 ## Usage
 For example usage, please have a look in `axe-core-demo.robot` which is kind of self-documenting
+
+## Example output
+
+Executed example will result in:
+[Robotframework logging](https://marketsquare.github.io/robotframework-browser-extensions/rflog-axe-core.html)
+[Axe html report](https://marketsquare.github.io/robotframework-browser-extensions/AXE%20DEMO_1.html)
