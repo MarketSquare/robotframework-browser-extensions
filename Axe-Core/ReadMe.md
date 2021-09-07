@@ -4,7 +4,16 @@ This is an extension for Robot Framework ® Browser, leveraging [Axe Core for Pl
 
 ## Requirements:
 
-1. Robot Framework => 4		
-2. Robotframework-browser    
-3. @axe-core/playwright
-4. axe-html-reporter
+1. Robot Framework => 4     | `pip install -U robotframework`
+2. Robotframework-browser   | `pip install robotframework-browser` ⚠️ requires other installation steps, refer to the libraries own documentation
+3. @axe-core/playwright     | `npm install @axe-core/playwright` 
+4. axe-html-reporter        | `npm install axe-html-reporter`
+
+## Usage
+For example usage, please have a look in `axe-core-demo.robot` which is kind of self-documenting
+
+## Example output
+
+Executed example will result in:
+[Robotframework logging](https://marketsquare.github.io/robotframework-browser-extensions/rflog-axe-core.html)
+[Axe html report](https://marketsquare.github.io/robotframework-browser-extensions/AXE%20DEMO_1.html)
