@@ -4,7 +4,7 @@ Have you heard yet of the new Browser library? It's brings Playwright technology
 
 Since I'm on a GIS assignment when writing this, and I'm comparing maps, I needed some extra functionality. Browser gives you the possibility to [extend it's functionality with CommonJS](https://marketsquare.github.io/robotframework-browser/Browser.html#Extending Browser library with a JavaScript module).
 
-Together with my front-end colleague,  we've created a code snippet, which you can find in [my gist](https://gist.github.com/leeuwe/f6e9b8691fcb0b397a173142ff0941ed). Note, that there's no exeption handeling for arg[1], as we've decided that this keyword will always be called **after** we've taken the "Actual" screenshot.
+Together with my front-end colleague,  we've created a code snippet, which you can find in [above](https://github.com/MarketSquare/robotframework-browser-extensions/blob/main/Compare_Images/pixelmatch.js). Note, that there's no exeption handeling for arg[1], as we've decided that this keyword will always be called **after** we've taken the "Actual" screenshot.
 
 ```js
 function CompareImagesWithPixelmatch(page, args, logger)  {
