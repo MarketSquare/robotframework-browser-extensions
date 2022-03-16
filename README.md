@@ -15,3 +15,5 @@ Official documentation on how to extend Browser library with CommonJS can be fou
   This extension adds a keyword to enable for static WCAG checks with Deques Axe-Core.
 - [Compare_Images](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Compare_Images)
   Lightweight image compare. Also provides a Diff of the actual and base images.
+- [Wait-Until-Image-Match](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Wait-Until-Image-Match)
+  More advanced image match keyword that is waiting for image to be displayed on screen. Also possible to compare a particular region of the image.
