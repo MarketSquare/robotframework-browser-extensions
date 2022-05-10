@@ -1,9 +1,6 @@
 {
   "dependencies": {
     "@axe-core/playwright": "^4.3.1",
-    "@playwright/test": "^1.12.3",
-    "axe-html-reporter": "^2.2.3",
-    "fs": "^0.0.1-security",
-    "pixelmatch": "^5.2.1"
+    "axe-html-reporter": "^2.2.3"
   }
 }
