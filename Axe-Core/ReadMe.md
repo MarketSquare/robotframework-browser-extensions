@@ -9,6 +9,8 @@ This is an extension for Robot Framework ® Browser, leveraging [Axe Core for Pl
 3. @axe-core/playwright     | `npm install @axe-core/playwright` 
 4. axe-html-reporter        | `npm install axe-html-reporter`
 
+The additional npm packages mentioned can be installed by using the package.json file. Run `npm i .` in the folder where the package.json file is. This could be the folder where you execute your tests, or, if you know what you're doing at another location.
+
 ## Usage
 For example usage, please have a look in `axe-core-demo.robot` which is kind of self-documenting
 
