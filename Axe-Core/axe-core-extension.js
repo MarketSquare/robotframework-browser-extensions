@@ -1,7 +1,7 @@
 function AxeAnalyzePage(page, outputDirPath, Reportfolder, filename, logger) {
 	const AxeBuilder = require('@axe-core/playwright').default;
 	const { createHtmlReport } = require('axe-html-reporter');
-	const analysis = new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practise']).analyze().then(results => {
+	const analysis = new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']).analyze().then(results => {
 		createHtmlReport({ results, options: { outputDirPath: outputDirPath, outputDir: Reportfolder, reportFileName: filename } });
 		return results
 	});
