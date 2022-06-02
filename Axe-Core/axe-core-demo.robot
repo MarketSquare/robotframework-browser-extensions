@@ -2,9 +2,13 @@
 Library           Browser    jsextension=${CURDIR}${/}axe-core-extension.js
 Library           Collections
 
+
+*** Variables ***
+${PAGE}.   https://robotframework.org
+
 *** Test Cases ***
 AXE DEMO
-    New Page    https://robotframework.org
+    New Page    ${PAGE}
     Wait Until Network Is Idle    timeout=20s
     Generate Axe Results
 
