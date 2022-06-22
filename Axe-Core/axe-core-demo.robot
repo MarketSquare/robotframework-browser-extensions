@@ -1,6 +1,7 @@
 *** Settings ***
 Library           Browser    jsextension=${CURDIR}${/}axe-core-extension.js
 Library           Collections
+Library           OperatingSystem
 
 *** Test Cases ***
 AXE DEMO
