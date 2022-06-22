@@ -4,7 +4,7 @@ Library           Collections
 
 
 *** Variables ***
-${PAGE}.   https://robotframework.org
+${PAGE}    https://robotframework.org
 
 *** Test Cases ***
 AXE DEMO
