@@ -15,3 +15,5 @@ Official documentation on how to extend Browser library with CommonJS can be fou
   This extension adds a keyword to enable for static WCAG checks with Deques Axe-Core.
 - [Compare_Images](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Compare_Images)
   Lightweight image compare. Also provides a Diff of the actual and base images.
+- [Mendix](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Mendix)
+  This extension adds keywords for automating Mendix apps fast and easy.
