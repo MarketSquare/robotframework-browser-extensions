@@ -58,7 +58,7 @@ Once this step has succesfully been completed you should be able to acces and us
 You should now be able to use the keywords and (kick-)start your test automation for your Mendix project.
 
 ## Keyword documentation
-We did our best to document our keywords in as much detail as possible. Within the documentation you'll find information on the basic and the slightly more advanced usage. Keyword documentation can be found [here]().
+We did our best to document our keywords in as much detail as possible. Within the documentation you'll find information on the basic and the slightly more advanced usage. Keyword documentation can be found [here](https://marketsquare.github.io/robotframework-browser-extensions/MendixKeywords.html#Mendix%20Check).
 
 ## Example usage
 Below example shows the basic usage of all keywords as provided currently.
