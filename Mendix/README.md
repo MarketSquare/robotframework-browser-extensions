@@ -1,4 +1,4 @@
-# MendixLibrary
+# Mendix Browser extension
 
 **Contents**
 - Introduction
@@ -7,7 +7,7 @@
 - Example usage
 
 ## Introduction
-The Mendix library is an extension built on top of the Robot Framework Browser library and enables you to automate Mendix applications more easily and quickly as there is no need for xpath or css selectors in case of standard Mendix functionality. Instead you will be using a key=value method making your keywords more readable and maintainable.
+The Mendix Browser extension is an extension built on top of the Robot Framework Browser library and enables you to automate Mendix applications more easily and quickly as there is no need for xpath or css selectors in case of standard Mendix functionality. Instead you will be using a key=value method making your keywords more readable and maintainable.
 
 The extension is based on a Mendix Keywords resource file that was created for a Mendix project that was running Mendix version 5. The approach that was being used in the resource file and which is now being used in the extension has worked over all Mendix versions since.
 
