@@ -17,3 +17,5 @@ Official documentation on how to extend Browser library with CommonJS can be fou
   Lightweight image compare. Also provides a Diff of the actual and base images.
 - [Mendix](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Mendix)
   This extension adds keywords for automating Mendix apps fast and easy.
+- [Highlighter](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Highlighter)
+  Alternative to the built-in highlighting tool provided by Browser Library.
