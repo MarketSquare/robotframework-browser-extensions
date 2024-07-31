@@ -12,10 +12,16 @@ Official documentation on how to extend Browser library with CommonJS can be fou
 ## Extensions
 
 - [Axe-Core](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Axe-Core)
-  This extension adds a keyword to enable for static WCAG checks with Deques Axe-Core.
+  Enables for static WCAG checks with Deques Axe-Core.
 - [Compare_Images](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Compare_Images)
   Lightweight image compare. Also provides a Diff of the actual and base images.
+- [Highlighter](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Highlighter)
+  Provides an alternative to the built-in highlight option of BrowserLibrary.
 - [Mendix](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Mendix)
-  This extension adds keywords for automating Mendix apps fast and easy.
+  Automate Mendix apps fast and easy.
+- [Throttle_Network](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Throttle_Network)
+  Lets you throttle the network speed in your test scripts.
 - [Highlighter](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Highlighter)
   Alternative to the built-in highlighting tool provided by Browser Library.
+- [mockUrl](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/mockUrl)
+  Mocks / blocks requests to specific URL's.
