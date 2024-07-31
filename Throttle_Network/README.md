@@ -1,6 +1,6 @@
 # Extension to throttle the network speed in Chromium based browsers
 This an extension for Robot Framework Browser Library that lets you throttle the network speed in your test scripts.
-Because it uses the Chrome DevTools Protocol, it will only work with the Chromium, Chrome and MS Edge!
+Because it uses the Chrome DevTools Protocol, it will only work with the Chromium, Chrome and MS Edge Browsers!
 
 To include it in your project, copy the throttle_network.js file into a folder and include it where you instantiate the browser like so:
 ```
