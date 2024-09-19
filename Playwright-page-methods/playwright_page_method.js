@@ -19,8 +19,9 @@ This keyword executes a Playwright Page method.
 
 Parameters: page_function : (string) The page method to be executed in Playwright.
 
-Example
+Examples
 | Playwright Page Method  getByRole('link', { name: 'Get started' }).click()
+| Playwright Page Method  getByRole('listitem').filter({ has: page.getByRole('heading', { name: 'Product 2' }) }).getByRole('button', { name: 'Add to cart' }).click();
 `
 
 convertLocatorToBrowser.rfdoc = `
