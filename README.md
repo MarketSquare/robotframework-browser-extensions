@@ -19,6 +19,8 @@ Official documentation on how to extend Browser library with CommonJS can be fou
   Provides an alternative to the built-in highlight option of BrowserLibrary.
 - [Mendix](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Mendix)
   Automate Mendix apps fast and easy.
+- [Playwright page methods](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Playwright-page-methods)
+  Let's you use native Playwright JS syntax     
 - [Throttle_Network](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Throttle_Network)
   Lets you throttle the network speed in your test scripts.
 - [Highlighter](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Highlighter)

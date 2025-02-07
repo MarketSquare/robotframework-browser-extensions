@@ -1,40 +1,52 @@
+const path = require('node:path');
+const { expect } = require(path.resolve('node_modules/playwright/test'));
+
 async function playwrightPageMethod(page_method, page, logger) {
     const playwright_function = '(page.' + page_method + ')';
     logger("Executing Playwright Page method: " + page_method)
-    return await eval(playwright_function);
+    const result = await eval(playwright_function);
+    // If the result is an object we assume it's a locator so we return the _selector property of the locator object
+    if (typeof result == "object") {
+        return result._selector;
+    } else {
+        return result;
+    }
 }
 
-function convertLocatorToBrowser(playwright_locator, logger) {
-    if (typeof playwright_locator == "object") {
-        const browser_locator = playwright_locator['_selector']
-        logger("Locator converted to : " + browser_locator)
-        return browser_locator;
+async function playwrightJS(statement, page, logger) {
+    const playwright_statement = '(' + statement + ')';
+    logger("Executing Playwright method: " + statement)
+    const result = await eval(playwright_statement);
+    // If the result is an object we assume it's a locator so we return the _selector property of the locator object
+    if (typeof result == "object") {
+        return result._selector;
     } else {
-        throw new Error("convertPlaywrightLocatorToBrowser: playwright_locator is not an object");
+        return result;
     }
 }
 
 playwrightPageMethod.rfdoc = `
 This keyword executes a Playwright Page method. 
 
-Parameters: page_function : (string) The page method to be executed in Playwright.
+Parameters: page_method : (string) The page method to be executed in Playwright.
 
-Examples
+Example
 | Playwright Page Method  getByRole('link', { name: 'Get started' }).click()
-| Playwright Page Method  getByRole('listitem').filter({ has: page.getByRole('heading', { name: 'Product 2' }) }).getByRole('button', { name: 'Add to cart' }).click();
 `
 
-convertLocatorToBrowser.rfdoc = `
-Converts a returned PlaywrightPageMethod locator to a BrowserLibrary locator.
+playwrightJS.rfdoc = `
+This keyword executes a JavaScript Playwright statement, which can be page methods including assertions.
+Except for the following assertions which are not supported: 
+| expect(page).toHaveScreenshot()
+| expect(page).toMatchSnapshot()
 
-Parameters: playwright_locator : (object) Playwright locator object.
+Parameters: statement : (string) The Playwright statement to be executed.
 
-Example:
-|  \${pw_locator}    Playwright Page Method    getByRole('link', { name: 'Get started' })
-|  \${bl_locator}    Convert Locator To Browser    {pw_locator}
-|  Click  \${bl_locator}
+Example
+| Playwright JS  page.getByRole('link', { name: 'Get started' }).click()
+| Playwright JS  expect(page.getByRole('link', { name: 'Get started' })).toBeVisible()
 `
 
 exports.__esModule = true;
 exports.playwrightPageMethod = playwrightPageMethod;
-exports.convertLocatorToBrowser = convertLocatorToBrowser;
+exports.playwrightJS = playwrightJS;
