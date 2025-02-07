@@ -28,8 +28,7 @@ Native Playwright
     Playwright Page Method    getByLabel('Search').click()
     Playwright Page Method    getByLabel('Search').nth(1).type('locators')
     ${pw_locator}    Playwright Page Method    getByRole('link', { name: 'FrameLocator' })
-    ${clickme}       Convert Locator To Browser    playwright_locator=${pw_locator}
-    Click            ${clickme}
+    Click    ${pw_locator}
     Sleep    3s
 
 Playwright Assertions
