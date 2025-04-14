@@ -23,7 +23,5 @@ Official documentation on how to extend Browser library with CommonJS can be fou
   Let's you use native Playwright JS syntax     
 - [Throttle_Network](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Throttle_Network)
   Lets you throttle the network speed in your test scripts.
-- [Highlighter](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/Highlighter)
-  Alternative to the built-in highlighting tool provided by Browser Library.
 - [mockUrl](https://github.com/MarketSquare/robotframework-browser-extensions/tree/main/mockUrl)
   Mocks / blocks requests to specific URL's.
