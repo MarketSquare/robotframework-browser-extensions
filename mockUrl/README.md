@@ -16,9 +16,13 @@ To enable the keyword:
 Library        Browser      jsextension=${CURDIR}/mockUrl.js
 ```
 
-This adds a keyword `mockUrl` to your browser library instance and it takes one more arguments of dictionary with following keys:
+This adds a keyword 2 keywords, `mockUrl` and  `blockUrl` to your browser library instance.
 
-* `url` - absolute URL to mock
+### mockUrl
+
+it takes one more arguments of dictionary with following keys:
+
+* `url` - URL to mock, absolute or with wildcards.
 * `statusCode` - HTTP status code to return for the request
 * `contentType` - HTTP Content-Type header to return for the request
 * `body`- HTTP body to return for the request
@@ -35,5 +39,28 @@ Does Nothing But Highlghts Usage
   mockUrl       ${CHAT_MOCK}
 ```
 
-See [mockurl_example.robot](./mockurl_example.robot) for full example.
+### blockUrl
+
+It takes one argument of URL to block, absolute or with wildcards and string for error code. This can be used to block requests to specific URLs that so that it can simulate network errors, host not reachable and stuff like that..
+
+* `url` - URL to mock, absolute or with wildcards.
+* `errorCode` - HTTP status code to return for the request
+
+Available error codes are listed in [Playwright API](https://playwright.dev/docs/api/class-route#route-abort) documentation.
+
+Example:
+
+```robot
+   VAR   &{BLOCK_WITH_ACCESS_DENIED}   url=https://www.google.com/**    errorCode=accessdenied
+   New Browser    chromium
+   New Context    baseURL=https://www.google.com
+   New Page    about:blank    # New Page has to be called or page.route ain't a function.
+   blockUrl    ${BLOCK_WITH_ACCESS_DENIED}
+   Go To    /
+```
+
+
+
+
+See [mockurl_example.robot](./mockurl_example.robot) for full examples.
 ```
