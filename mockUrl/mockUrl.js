@@ -9,5 +9,16 @@ async function mockUrl(args, page, logger) {
     });
   }
 }
+
+async function blockUrl(args, page, logger) {
+  for (const arg of args) {
+    await page.route(String(arg.url), route => {
+      route.abort(arg.errorCode || 'failed');
+    });
+  }
+}
+
+
 exports.__esModule = true;
 exports.mockUrl = mockUrl
+exports.blockUrl= blockUrl
