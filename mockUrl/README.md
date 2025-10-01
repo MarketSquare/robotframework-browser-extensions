@@ -60,7 +60,30 @@ Example:
 ```
 
 
+### RecordHAR
 
+To record a HAR file, you can use the `RecordHAR` keyword. This will capture all network requests made during the test execution and save them to a specified file and then later on, this HAR file be used to mock requests using the `MockWithHAR` keyword. Do provide a full path for HAR file since default location will be where playwright has been installed.
+
+Worth pointing out that RecordHAR keyword is not nessarily needed to record the HAR file. New Context can be created with `recordHar`, See [documentatio](https://marketsquare.github.io/robotframework-browser/Browser.html#New%20Context) for more details.
+
+Example:
+```robot
+    VAR   &{HAR_OPTIONS}   url=**/*    har=${CURDIR}/pcuf.har
+    RecordHAR    ${HAR_OPTIONS}
+```
+
+### MockWithHAR
+
+Once you have a har recording, you can use the `MockWithHAR` keyword to mock requests based on the recorded HAR file. This will intercept requests and respond with the data from the HAR file. Example of modified har file is found in this repository.
+
+Example:
+
+```robot
+    VAR   &{HAR_OPTIONS}   url=**/*    har=${CURDIR}/modified_pcuf.har
+    MockWithHar   ${HAR_OPTIONS}
+```
+
+## More Examples
 
 See [mockurl_example.robot](./mockurl_example.robot) for full examples.
 ```

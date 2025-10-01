@@ -18,7 +18,31 @@ async function blockUrl(args, page, logger) {
   }
 }
 
+async function RecordHAR(args, page, logger, playwright) {
+  for (const arg of args) {
+    await page.routeFromHAR(arg.har, {
+      url: arg.url,
+      update: true,
+      updateMode: "full",
+      notFound: "fallback"
+    });
+  }
+}
+
+
+async function MockWithHar(args, page, logger, playwright) {
+  for (const arg of args) {
+    await page.routeFromHAR(arg.har, {
+      url: arg.url,
+      update: false,
+      notFound: "fallback"
+    });
+  }
+}
+
 
 exports.__esModule = true;
 exports.mockUrl = mockUrl
 exports.blockUrl= blockUrl
+exports.RecordHAR = RecordHAR;
+exports.MockWithHar = MockWithHar;

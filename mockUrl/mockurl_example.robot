@@ -56,3 +56,38 @@ Test Block Url without error code
     EXCEPT
         No Operation
     END
+
+
+Test Recording HAR
+    VAR   &{HAR_OPTIONS}   url=**/*    har=${CURDIR}/pcuf.har
+
+    New Browser    chromium
+    New Context    baseURL=https://www.pcuf.fi
+    New Page    about:blank    # New Page has to be called or page.route ain't a function.
+    RecordHAR    ${HAR_OPTIONS}
+
+    Go To    /~rasjani/example.html
+    Get Text   id=test   ==   Unmodified
+
+
+    Close Page
+    Close Context
+    Close Browser
+
+
+
+Test Mock With HAR
+    VAR   &{HAR_OPTIONS}   url=**/*    har=${CURDIR}/modified_pcuf.har
+
+    New Browser    chromium
+    New Context    baseURL=https://www.pcuf.fi
+    New Page    about:blank    # New Page has to be called or page.route ain't a function.
+    MockWithHar   ${HAR_OPTIONS}
+
+    Go To    /~rasjani/example.html
+    Get Text   id=test   ==   Modified with MockFromHAR
+
+
+    Close Page
+    Close Context
+    Close Browser
